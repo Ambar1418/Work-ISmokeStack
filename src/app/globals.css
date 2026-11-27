@@ -1,80 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  --bg-midnight: #061725;
-  --bg-forest: #0a2130;
-  --accent-emerald: #38d996;
-  --accent-mint: #a6f2c8;
-  --text-warm: #f5f7f4;
-  --text-muted: #a5b8b4;
+  --bg-evergreen: #081510;
+  --surface-forest: #0e2219;
+  --surface-leaf: #142f23;
+  --ink-ivory: #f4efe4;
+  --ink-sage: #9cb5a5;
+  --accent-emerald: #39c985;
+  --accent-gold: #c9a65b;
 }
 
 @theme inline {
-  --color-background: var(--bg-midnight);
-  --color-surface: var(--bg-forest);
-  --color-emerald: var(--accent-emerald);
-  --color-mint: var(--accent-mint);
-  --color-foreground: var(--text-warm);
-  --color-muted: var(--text-muted);
-  --font-serif: var(--font-editorial), Georgia, serif;
+  --color-background: var(--bg-evergreen);
+  --color-surface: var(--surface-forest);
+  --color-ivory: var(--ink-ivory);
+  --color-sage: var(--ink-sage);
+  --color-gold: var(--accent-gold);
   --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
-  --font-mono: var(--font-mono), ui-monospace, monospace;
+  --font-serif: var(--font-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-sans), system-ui, -apple-system, sans-serif;
 }
 
 html {
-  background-color: #061725;
-  color: #f5f7f4;
+  background-color: #081510;
+  color: #f4efe4;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   scroll-behavior: smooth;
 }
 
 body {
   background: radial-gradient(
-    ellipse 120% 80% at 50% 0%,
-    #04101a 0%,
-    #061725 45%,
-    #0a2130 100%
+    ellipse 90% 70% at 50% 15%,
+    #10281e 0%,
+    #081510 68%,
+    #050e0a 100%
   );
-  color: #f5f7f4;
+  color: #f4efe4;
+  font-variant-numeric: tabular-nums;
   overflow-x: hidden;
 }
 
-/* Custom subtle scrollbars */
+.dark-botanical-panel {
+  background-color: #0c1d16;
+  border: 1px solid rgba(156, 181, 165, 0.22);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.55);
+}
+
+.ivory-dashboard-surface {
+  background-color: #f5f1e8;
+  color: #12271e;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #061725;
+  background: #081510;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(56, 217, 150, 0.25);
+  background: rgba(156, 181, 165, 0.28);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(56, 217, 150, 0.5);
-}
-
-.botanical-glass {
-  background: linear-gradient(
-    145deg,
-    rgba(10, 33, 48, 0.82) 0%,
-    rgba(6, 23, 37, 0.9) 100%
-  );
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(56, 217, 150, 0.2);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45),
-    0 0 32px rgba(56, 217, 150, 0.08);
-}
-
-.emerald-glow {
-  filter: drop-shadow(0 0 8px rgba(56, 217, 150, 0.45));
-}
-
-.soft-emerald-text-glow {
-  text-shadow: 0 0 28px rgba(56, 217, 150, 0.25);
+  background: rgba(201, 166, 91, 0.55);
 }
 
 @media (prefers-reduced-motion: reduce) {

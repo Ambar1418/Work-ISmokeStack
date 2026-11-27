@@ -1,43 +1,23 @@
 import type { Metadata } from "next";
-import {
-  Cormorant_Garamond,
-  Plus_Jakarta_Sans,
-  JetBrains_Mono,
-} from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const editorialSerif = Cormorant_Garamond({
-  variable: "--font-editorial",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
-});
-
-const bodySans = Plus_Jakarta_Sans({
+const primarySans = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-});
-
-const monoFont = JetBrains_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "SONIA — The Architect of Clarity",
+  title: "SONIA — Living Strategy Tree",
   description:
-    "See the unseen. Connect the dots. Make things simpler. An interactive botanical storytelling experience exploring Sonia's professional identity, thinking philosophy, and leadership journey.",
+    "See the unseen. Connect the dots. Make things simpler. Explore Sonia Specialist's interactive Living Strategy Tree and AI Strategy Guide.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${editorialSerif.variable} ${bodySans.variable} ${monoFont.variable} h-full antialiased scroll-smooth`}
-    >
-      <body className="min-h-full bg-[#061725] text-[#F5F7F4] font-sans selection:bg-[#38D996]/25 selection:text-[#A6F2C8] overflow-x-hidden">
+    <html lang="en" className={`${primarySans.variable} h-full antialiased scroll-smooth`}>
+      <body className="min-h-full bg-[#081510] text-[#F4EFE4] font-sans selection:bg-[#C9A65B]/30 selection:text-[#F4EFE4] overflow-x-hidden">
         {children}
       </body>
     </html>
