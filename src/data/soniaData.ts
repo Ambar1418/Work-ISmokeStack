@@ -80,7 +80,7 @@ export const SONIA_IDENTITY = {
   closingStatementLine2: "It's about understanding what connects everything.",
   closingTagline: "Building. Learning. Growing.",
   // Supply verified LinkedIn URL here when available. Null avoids fabricated or broken links.
-  linkedinUrl: null as string | null,
+  linkedinUrl: "https://www.linkedin.com/in/soniaspecialist/" as string | null,
 };
 
 export const SCENES: SceneMeta[] = [
